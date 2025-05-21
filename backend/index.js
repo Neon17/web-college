@@ -17,6 +17,23 @@ const quotes = [
     {'id': 5, 'quote': 'You have within you right now, everything you need to deal with whatever the world can throw at you.'}
 ];
 
+const db = require('better-sqlite3')('data.db')
+db.prepare("CREATE TABLE IF NOT EXISTS quotes ( id INTEGER PRIMARY KEY AUTOINCREMENT, text TEXT NOT NULL )").run();
+
+
+app.get('/backend-quotes', (req, res)=>{
+    const all = db.prepare("SELECT * from quotes").all();
+    response.json(all)
+})
+
+app.get('/quotes/:id', (req,res) => {
+    res.status(200).json({
+        id: req.params.id
+    })
+})
+
+// const info = db.prepare('INSERT INTO quotes (text) VALUES (?)').run(text);
+
 app.get('/quotes', (req,res)=>{
     res.json(quotes);
 })
