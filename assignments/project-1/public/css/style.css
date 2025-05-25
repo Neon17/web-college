@@ -1,0 +1,44 @@
+.loader {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+.containerLoader {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#data-authors {
+  border-collapse: collapse;
+}
+
+td,th {
+  padding: 5px;
+}
+
+.data-input-field {
+  padding: 5px;
+}
+
+.input-field-container {
+  padding: 3px;
+}
+
+#submit-data-field {
+  padding: 10px;
+}
+
+#data-create-form {
+  padding-bottom: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
