@@ -10,6 +10,10 @@ function App() {
   ]);
   const [newBook, setNewBook] = useState('');
 
+
+
+  // Instead of doing value = {} onChange = {}
+  // We can use onSubmit = (), there we can use FormData to get the values like FormDate["name_of_input_field"]
   return (
     <>
       <Greet name="Hello World" />

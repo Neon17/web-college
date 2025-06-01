@@ -1,0 +1,47 @@
+<!-- Just to learn prevent Default -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+
+    <form action="" onsubmit="" id="studentform" name="myForm" method="get">
+        FirstName:
+        <input type="text" name="firstName" id="">
+        <input type="text" name="lastName" id="">
+        <input type="number" name="roll" id="">
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        const studentForm = document.getElementById("studentform");
+
+        function handleEvent(event) {
+            event.preventDefault(); // prevent submitting of form when clicked submit button
+
+            let students = [];
+
+            const firstName = document.forms["myForm"]["firstName"];
+            const lastName = document.forms["myForm"]["lastName"];
+            const roll = document.forms["myForm"]["roll"];
+
+            const newStudent = {
+                name: firstName.value,
+                roll: lastName.value
+            }
+            
+            student.push(newStudent);
+        }
+
+        studentForm.addEventListener("submit", handleEvent);
+    </script>
+</body>
+
+</html>
