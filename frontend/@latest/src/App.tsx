@@ -1,4 +1,5 @@
 import './App.css'
+import Form from './components/Form';
 import Greet from './components/Greet'
 import Quote from './components/Quote'
 import { useState } from 'react'
@@ -31,6 +32,7 @@ function App() {
       <p className="book-print">
         newBook = {newBook}
       </p>
+      <Form/>
     </>
   )
 }
